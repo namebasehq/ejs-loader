@@ -1,17 +1,14 @@
 {
-  "name": "ejs-loader",
-  "version": "0.0.0-development",
-  "description": "EJS (Underscore/LoDash Templates) loader for webpack",
+  "name": "namebase-ejs-loader",
+  "version": "0.0.1",
+  "description": "EJS (Underscore/LoDash Templates) loader for webpack. Forked by Namebase for security.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/okonet/ejs-loader.git"
+    "url": "https://github.com/namebasehq/ejs-loader.git"
   },
   "keywords": [
     "ejs",
-    "underscore",
-    "lodash",
-    "_",
     "webpack",
     "loader",
     "template"
@@ -19,17 +16,11 @@
   "author": "Andrey Okonetchnikov <andrey@okonet.ru>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/okonet/ejs-loader/issues"
+    "url": "https://github.com/namebasehq/ejs-loader/issues"
   },
-  "homepage": "https://github.com/okonet/ejs-loader",
+  "homepage": "https://github.com/namebasehq/ejs-loader",
   "dependencies": {
-    "lodash": "^3.6.0",
-    "loader-utils": "^0.2.7"
-  },
-  "scripts": {
-    "travis-deploy-once": "travis-deploy-once"
-  },
-  "devDependencies": {
-    "travis-deploy-once": "^4.3.4"
+    "loader-utils": "^0.2.7",
+    "lodash.template": "^4.4.0"
   }
 }

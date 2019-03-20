@@ -1,5 +1,5 @@
-var _ = require('lodash');
-var loaderUtils = require('loader-utils');
+const template = require('lodash.template')
+const loaderUtils = require('loader-utils');
 
 function getOptions(context) {
   if (context.options && context.options.ejsLoader) {
@@ -10,16 +10,16 @@ function getOptions(context) {
 
 module.exports = function(source) {
   this.cacheable && this.cacheable();
-  var query = loaderUtils.parseQuery(this.query);
-  var options = getOptions(this);
+  const query = loaderUtils.parseQuery(this.query);
+  const options = getOptions(this);
 
-  ['escape', 'interpolate', 'evaluate'].forEach(function(templateSetting) {
-    var setting = query[templateSetting];
-    if (_.isString(setting)) {
+  ['escape', 'interpolate', 'evaluate'].forEach(templateSetting => {
+    const setting = query[templateSetting];
+    if (typeof setting === 'string') {
       query[templateSetting] = new RegExp(setting, 'g');
     }
   });
 
-  var template = _.template(source, _.extend({}, query, options));
-  return 'module.exports = ' + template;
+  const templatedString = template(source, { ...query, ...options});
+  return 'module.exports = ' + templatedString;
 };
