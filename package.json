@@ -1,6 +1,6 @@
 {
   "name": "namebase-ejs-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "EJS (Underscore/LoDash Templates) loader for webpack. Forked by Namebase for security.",
   "main": "index.js",
   "repository": {
@@ -21,6 +21,6 @@
   "homepage": "https://github.com/namebasehq/ejs-loader",
   "dependencies": {
     "loader-utils": "^0.2.7",
-    "lodash.template": "^4.4.0"
+    "lodash.template": "^4.5.0"
   }
 }
