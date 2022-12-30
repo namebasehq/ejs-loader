@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/namebasehq/ejs-loader",
   "dependencies": {
-    "loader-utils": "^0.2.7",
+    "loader-utils": "^3.2.1",
     "lodash.template": "^4.5.0"
   }
 }
